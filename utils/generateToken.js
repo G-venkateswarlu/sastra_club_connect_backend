@@ -7,7 +7,7 @@ const generateToken = (res, id, role) => {
 
  res.cookie("token", token, {
   httpOnly: true,
-  secure: false,          // keep false while testing in Postman
+  secure: true,          // keep false while testing in Postman
   sameSite: "none",
   maxAge: 7 * 24 * 60 * 60 * 1000,
   path: "/"
@@ -16,3 +16,4 @@ const generateToken = (res, id, role) => {
 
 
 export default generateToken;
+
